@@ -15,3 +15,9 @@ split
         return true;
     }
 }
+reset
+{
+    if (old.XP != 60200 && current.XP < 60200){
+        return true;
+    }
+}
