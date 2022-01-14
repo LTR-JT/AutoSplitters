@@ -5,19 +5,22 @@ state("DeadIslandRiptideGame")
 }
 start
 {
-    if (old.XP != 60200 && current.XP == 60200){
+    if (old.XP != 60200 && current.XP == 60200)
+    {
         return true;
     }
 }
 split
 {
-    if(current.ChapterNumber > old.ChapterNumber){
+    if (old.ChapterNumber < current.ChapterNumber)
+    {
         return true;
     }
 }
 reset
 {
-    if (old.XP != 60200 && current.XP < 60200){
+    if (old.XP != 60200 && current.XP < 60200)
+    {
         return true;
     }
 }
